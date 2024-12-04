@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f8f9864cb3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <img src="logo (2).png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>   
+                    <li><a href="#skills">skills</a></li>   
+                    <li><a href="#contact">contact</a></li> 
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="headertext">
+                <P>Frontend developer</P>
+                <h1>HI, I'm <span>Madhurima</span><br> From Guntur</h1>
+            </div>
+        </div>
+        <div class ="height">
+            <per> </per>
+        </div>
+    </div>
+<!------------about------------------------------------------------------------------>
+   <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="e92a595c45933ac37fcebdbb1918c462__1_-removebg-preview.png" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p>I am madhurima from guntur present i am pursuing B.tech(computer science and engineering) in bharatiya engineering science and technology innovation university.
+                        I've gained to a real-world setting. During my academic journey, I had the opportunity to work on various projects and assignments that helped me develop strong [HTML], [CSS], and [JS] skills .I am a fast learner and i can grosp very quickly then other
+                        .I am a good  hard worker</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                            <p class="tab-links"  onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>frontend developer</span><br>Web app development</li>
+                                <li><span>ui/ux</span><br>Designing app/web interfaces</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2026</span><br>B.tech(c.s.e) from BESTIU ATP</li>
+                                <li><span>2022</span><br>intermediate(m.p.c) FROM NRI JUNIOR COLLEGE Guntur</li>
+                                <li><span>2020</span><br>10th FROM ZPHS GUNTUR</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-------------------------------------- skills------------------------------------------------------------>
+<div id="skills">
+    <div class="container">
+        <h1 class="sub-title">My skills</h1>
+        <div class="skills-lists">
+            <div>
+                <i class="fa-brands fa-html5"></i>
+                <h2>HTML</h2>
+                <P>HTML is the foundation of web development. It defines the structure<br>
+                     of a web page by using  tags and elements.</P>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-css3"></i>
+                <h2>css</h2>
+                <P>CSS is used to control the layout of multiple web pages all at once.<br>
+                    It can be used to define styles for your web pages.</P>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-js"></i>
+                <h2>js</h2>
+                <P>JavaScript is a high-level, interpreted scripting language that enables
+                     you to implement complex features on web pages.</P>
+                    <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+<!------------------------------------contact----------------------------------------------------------------------->
+<div ID="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>madhurimayakkala@gmail.com</p>
+                <P><i class="fa-solid fa-phone"></i>6304309825</P>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form Name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="your Name" required>
+                    <input type="email" name="email" placeholder="your email"required>
+                    <textarea name="message" row="6" placeholder="your message"></textarea>
+                    <button type="submit" class="btn">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>copyright @ Madhurima.Made with <i class="fa-solid fa-heart"></i></p>
+</div>
+</div>
+<script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+</script>
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-400px";
+    }
+    
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx5kpIWI1J41ouD4_IHlioOWdy9P3BkihLuDcI6uQPWmTh5A4WPTK2Ppv1D2EV6mGkUYw/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
